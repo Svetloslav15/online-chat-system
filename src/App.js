@@ -8,10 +8,10 @@ import SidePanel from './components/side-panel/SidePanel';
 import Messages from './components/messages/Messages';
 import MetaPanel from './components/meta-panel/MetaPanel';
 
-const App = () => (
+const App = (props) => (
     <Grid columns='equal' className='app' style={{backgroundColor: '#eee'}}>
         <ColorPanel/>
-        <SidePanel/>
+        <SidePanel currentUser={props.currentUser}/>
         <Grid.Column style={{marginLeft: 320}}>
             <Messages/>
         </Grid.Column>
