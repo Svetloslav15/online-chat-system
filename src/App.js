@@ -15,7 +15,7 @@ const App = (props) => (
         <Grid.Column style={{marginLeft: 320}}>
             <Messages/>
         </Grid.Column>
-        <Grid.Column style={{marginLeft: 320}}>
+        <Grid.Column width={4}>
             <MetaPanel/>
         </Grid.Column>
     </Grid>
