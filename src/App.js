@@ -1,14 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { Button } from 'semantic-ui-react'
 
-function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
-}
+import {connect} from 'react-redux';
+import {Grid} from 'semantic-ui-react'
+import ColorPanel from './components/color-panel/ColorPanel';
+import SidePanel from './components/side-panel/SidePanel';
+import Messages from './components/messages/Messages';
+import MetaPanel from './components/meta-panel/MetaPanel';
 
-export default App;
+const App = () => (
+    <Grid columns='equal' className='app' style={{backgroundColor: '#eee'}}>
+        <ColorPanel/>
+        <SidePanel/>
+        <Grid.Column style={{marginLeft: 320}}>
+            <Messages/>
+        </Grid.Column>
+        <Grid.Column style={{marginLeft: 320}}>
+            <MetaPanel/>
+        </Grid.Column>
+    </Grid>
+);
+const mapStateToProps = state => ({
+    currentUser: state.user.currentUser
+});
+
+export default connect(mapStateToProps)(App);
