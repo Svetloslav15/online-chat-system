@@ -30,3 +30,7 @@ html, body, .app {
 .progress-bar {
   margin-top: 0.3em !important;
 }
+
+.menu {
+  padding-bottom: 2em;
+}

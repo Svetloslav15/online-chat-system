@@ -19,6 +19,7 @@ const App = (props) => (
                 key={props.currentChannel && props.currentChannel.id}
                 currentChannel={props.currentChannel}
                 currentUser={props.currentUser}
+                isPrivateChannel={props.isPrivateChannel}
             />
         </Grid.Column>
         <Grid.Column width={4}>
@@ -28,7 +29,8 @@ const App = (props) => (
 );
 const mapStateToProps = state => ({
     currentUser: state.user.currentUser,
-    currentChannel: state.channel.currentChannel
+    currentChannel: state.channel.currentChannel,
+    isPrivateChannel: state.channel.isPrivateChannel
 });
 
 export default connect(mapStateToProps)(App);

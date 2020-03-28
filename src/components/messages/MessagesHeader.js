@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 class MessagesHeader extends React.Component {
     render() {
-        const {currentChannel, usersCount, handleSearchChange, searchLoading} = this.props;
+        const {usersCount, handleSearchChange, searchLoading, channelName, isPrivateChannel} = this.props;
         return (
             <Segment clearing>
                 <Header
@@ -13,9 +13,9 @@ class MessagesHeader extends React.Component {
                     floated='left'
                     style={{marginBottom: 0}}>
                     <span>
-                        # {currentChannel && currentChannel.name} <Icon
+                        {channelName} {!isPrivateChannel && (<Icon
                         name='star outline'
-                        color='black'/>
+                        color='black'/>)}
 
                     </span>
                     <Header.Subheader>
