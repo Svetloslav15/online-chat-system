@@ -17,3 +17,8 @@ html, body, .app {
   right: 1em;
   z-index: 200;
 }
+
+.message-self {
+  border-left: 2px solid orange;
+  padding-left: 8px;
+}
