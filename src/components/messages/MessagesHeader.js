@@ -4,7 +4,10 @@ import {connect} from 'react-redux';
 
 class MessagesHeader extends React.Component {
     render() {
-        const {usersCount, handleSearchChange, searchLoading, channelName, isPrivateChannel} = this.props;
+        const {
+            usersCount, handleSearchChange, searchLoading,
+            channelName, isPrivateChannel, handleStar, isChannelStarred
+        } = this.props;
         return (
             <Segment clearing>
                 <Header
@@ -13,9 +16,12 @@ class MessagesHeader extends React.Component {
                     floated='left'
                     style={{marginBottom: 0}}>
                     <span>
-                        {channelName} {!isPrivateChannel && (<Icon
-                        name='star outline'
-                        color='black'/>)}
+                        {channelName} {!isPrivateChannel && (
+                        <Icon
+                            onClick={handleStar}
+                            name={isChannelStarred ? 'star' : 'star outline'}
+                            color={isChannelStarred ? 'yellow' : 'black'}/>
+                    )}
 
                     </span>
                     <Header.Subheader>
