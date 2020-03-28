@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 class MessagesHeader extends React.Component {
     render() {
-        const {currentChannel} = this.props;
+        const {currentChannel, usersCount, handleSearchChange, searchLoading} = this.props;
         return (
             <Segment clearing>
                 <Header
@@ -13,16 +13,19 @@ class MessagesHeader extends React.Component {
                     floated='left'
                     style={{marginBottom: 0}}>
                     <span>
-                        {currentChannel && currentChannel.name}
-                        <Icon name='star outline'
-                              color='black'/>
+                        # {currentChannel && currentChannel.name} <Icon
+                        name='star outline'
+                        color='black'/>
+
                     </span>
                     <Header.Subheader>
-                        2 users
+                        {usersCount}
                     </Header.Subheader>
                 </Header>
                 <Header floated='right'>
                     <Input
+                        loading={searchLoading}
+                        onChange={handleSearchChange}
                         size='mini'
                         icon='search'
                         name='searchTerm'

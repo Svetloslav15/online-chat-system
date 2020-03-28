@@ -4,6 +4,7 @@ import firebase from '../../firebase';
 import {uuid} from 'uuidv4';
 
 import FileModal from './FileModal';
+import ProgressBar from './ProgressBar';
 
 class MessageForm extends React.Component {
     state = {
@@ -97,7 +98,6 @@ class MessageForm extends React.Component {
     };
 
     sendFileMessage = (downloadUrl, ref, pathToUpload) => {
-        console.log(downloadUrl);
         ref.child(pathToUpload)
             .push()
             .set(this.createMessage(downloadUrl))
@@ -129,7 +129,7 @@ class MessageForm extends React.Component {
     };
 
     render() {
-        const {errors, message, loading, modal} = this.state;
+        const {errors, message, loading, modal, uploadState, percentUploaded} = this.state;
 
         return (
             <Segment className='message__form'>
@@ -159,6 +159,7 @@ class MessageForm extends React.Component {
                         labelPosition='left'
                         icon='cloud upload'
                         onClick={this.openModal}
+                        disabled={uploadState === 'uploading'}
                     />
 
                     <FileModal
@@ -166,6 +167,9 @@ class MessageForm extends React.Component {
                         uploadFile={this.uploadFile}
                         closeModal={this.closeModal}/>
                 </Button.Group>
+                <ProgressBar
+                uploadState={uploadState}
+                percentUploaded={percentUploaded}/>
             </Segment>
         )
     }

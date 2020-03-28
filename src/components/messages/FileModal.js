@@ -50,6 +50,7 @@ class FileModal extends React.Component {
                         label='File types: jpg, png'
                         name='file'
                         type='file'
+                        accept='image/*'
                         onChange={this.addFile}
                     />
                 </Modal.Content>
