@@ -33,6 +33,7 @@ class Messages extends React.Component {
                 })
             })
     };
+
     displayMessages = (messages) => (
         messages.length > 0 && messages.map(message => (
             <Message
