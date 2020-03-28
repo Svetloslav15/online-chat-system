@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8faeaa3d-b611-4d8f-858a-65708bcad0f0" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/side-panel/Starred.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/components/messages/Messages.js" afterPath="$PROJECT_DIR$/src/components/messages/Messages.js" />
-      <change beforePath="$PROJECT_DIR$/src/components/messages/MessagesHeader.js" afterPath="$PROJECT_DIR$/src/components/messages/MessagesHeader.js" />
       <change beforePath="$PROJECT_DIR$/src/components/side-panel/Channels.js" afterPath="$PROJECT_DIR$/src/components/side-panel/Channels.js" />
       <change beforePath="$PROJECT_DIR$/src/components/side-panel/SidePanel.js" afterPath="$PROJECT_DIR$/src/components/side-panel/SidePanel.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/side-panel/Starred.js" afterPath="$PROJECT_DIR$/src/components/side-panel/Starred.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,8 +22,8 @@
       <file leaf-file-name="SidePanel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/side-panel/SidePanel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="272">
+              <caret line="16" column="61" lean-forward="false" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -33,11 +31,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Channels.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Channels.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/side-panel/Channels.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-178">
-              <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+            <state relative-caret-position="145">
+              <caret line="182" column="25" lean-forward="false" selection-start-line="182" selection-start-column="25" selection-end-line="182" selection-end-column="25" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
                 <element signature="n#!!block;n#componentDidMount#0;n#Channels#0" expanded="false" />
@@ -58,7 +56,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Messages.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Messages.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/messages/Messages.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
@@ -84,10 +82,11 @@
       <file leaf-file-name="Starred.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/side-panel/Starred.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+            <state relative-caret-position="153">
+              <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#1776#2091#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -127,11 +126,11 @@
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/messages/MessageForm.js" />
         <option value="$PROJECT_DIR$/src/components/side-panel/DirectMessages.js" />
-        <option value="$PROJECT_DIR$/src/components/side-panel/SidePanel.js" />
-        <option value="$PROJECT_DIR$/src/components/side-panel/Channels.js" />
         <option value="$PROJECT_DIR$/src/components/messages/MessagesHeader.js" />
-        <option value="$PROJECT_DIR$/src/components/side-panel/Starred.js" />
         <option value="$PROJECT_DIR$/src/components/messages/Messages.js" />
+        <option value="$PROJECT_DIR$/src/components/side-panel/SidePanel.js" />
+        <option value="$PROJECT_DIR$/src/components/side-panel/Starred.js" />
+        <option value="$PROJECT_DIR$/src/components/side-panel/Channels.js" />
       </list>
     </option>
   </component>
@@ -292,12 +291,12 @@
       <workItem from="1585226369603" duration="8468000" />
       <workItem from="1585255994868" duration="15000" />
       <workItem from="1585301207176" duration="21617000" />
-      <workItem from="1585388556050" duration="22511000" />
+      <workItem from="1585388556050" duration="23505000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52611000" />
+    <option name="totallyTimeSpent" value="53605000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -311,7 +310,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1508772" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17719299" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -672,49 +671,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/side-panel/SidePanel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/side-panel/Channels.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-178">
-          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="n#!!block;n#componentDidMount#0;n#Channels#0" expanded="false" />
-            <element signature="e#759#1069#0" expanded="false" />
-            <element signature="e#1117#1358#0" expanded="false" />
-            <element signature="e#1441#2198#0" expanded="false" />
-            <element signature="e#2229#2518#0" expanded="false" />
-            <element signature="e#2661#2869#0" expanded="false" />
-            <element signature="e#2903#3325#0" expanded="false" />
-            <element signature="e#3364#3423#0" expanded="false" />
-            <element signature="e#3456#3528#0" expanded="false" />
-            <element signature="e#3554#4154#0" expanded="false" />
-            <element signature="e#4185#4310#0" expanded="false" />
-            <element signature="e#4438#4676#0" expanded="false" />
-            <element signature="e#4784#5246#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/side-panel/Starred.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/messages/Messages.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -732,6 +688,50 @@
             <marker date="1585431416482" expanded="true" signature="5515:5805" ph="..." />
             <marker date="1585431416482" expanded="true" signature="5572:5778" ph="..." />
             <marker date="1585431416482" expanded="true" signature="5836:6106" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/side-panel/SidePanel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="61" lean-forward="false" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/side-panel/Starred.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#1776#2091#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/side-panel/Channels.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="182" column="25" lean-forward="false" selection-start-line="182" selection-start-column="25" selection-end-line="182" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!block;n#componentDidMount#0;n#Channels#0" expanded="false" />
+            <element signature="e#759#1069#0" expanded="false" />
+            <element signature="e#1117#1358#0" expanded="false" />
+            <element signature="e#1441#2198#0" expanded="false" />
+            <element signature="e#2229#2518#0" expanded="false" />
+            <element signature="e#2661#2869#0" expanded="false" />
+            <element signature="e#2903#3325#0" expanded="false" />
+            <element signature="e#3364#3423#0" expanded="false" />
+            <element signature="e#3456#3528#0" expanded="false" />
+            <element signature="e#3554#4154#0" expanded="false" />
+            <element signature="e#4185#4310#0" expanded="false" />
+            <element signature="e#4438#4676#0" expanded="false" />
+            <element signature="e#4784#5246#0" expanded="false" />
           </folding>
         </state>
       </provider>
