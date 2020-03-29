@@ -1,12 +1,57 @@
 import React from 'react';
-import {Segment, Accordion, Header, Icon, Label, List, Image} from 'semantic-ui-react';
+import {Segment, Accordion, Header, Icon, Label, Comment, Image} from 'semantic-ui-react';
+import firebase from '../../firebase';
 
 class MetaPanel extends React.Component {
     state = {
         activeIndex: 0,
         currentChannel: this.props.currentChannel,
-        isPrivateChannel: this.props.isPrivateChannel
+        isPrivateChannel: this.props.isPrivateChannel,
+        messagesRef: firebase.database().ref('messages'),
+        starredMessages: []
     };
+
+    componentDidMount() {
+        const {messagesRef} = this.state;
+        this.getStarredMessages();
+
+        messagesRef.on("child_changed", () => {
+            this.getStarredMessages();
+        });
+    }
+
+    getStarredMessages = () => {
+        const {currentChannel, messagesRef} = this.state;
+        const starredMessages = [];
+
+        if (currentChannel) {
+            messagesRef.child(currentChannel.id).once('value', function (snapshot) {
+                snapshot.forEach(function (message) {
+                    if (message.val().star === true) {
+                        starredMessages.push(message.val());
+                    }
+                });
+            });
+        }
+
+        this.setState({starredMessages});
+    };
+
+    displayStarredMessages = (starredMessages) => (
+        starredMessages.map(x => (
+            <Comment>
+                <Comment.Avatar src={x.user.avatar}/>
+                <Comment.Content>
+                    <Comment.Author as='a'>{x.user.name}</Comment.Author>
+                    {
+                        x.image ? <Image src={x.image} className='message-image'/> :
+                            <Comment.Text>{x.content}</Comment.Text>
+                    }
+                </Comment.Content>
+            </Comment>
+        ))
+    );
+
 
     setActiveIndex = (event, titleProps) => {
         const {index} = titleProps;
@@ -16,7 +61,7 @@ class MetaPanel extends React.Component {
     };
 
     render() {
-        const {activeIndex, isPrivateChannel, currentChannel} = this.state;
+        const {activeIndex, isPrivateChannel, currentChannel, starredMessages} = this.state;
 
         if (isPrivateChannel) {
             return null;
@@ -49,8 +94,8 @@ class MetaPanel extends React.Component {
                         <Icon name={'star'}/>
                         Starred Posts
                     </Accordion.Title>
-                    <Accordion.Content active={activeIndex === 1}>
-                        details
+                    <Accordion.Content active={activeIndex === 1} style={{overflow: 'auto', maxHeight: 200}}>
+                        {this.displayStarredMessages(starredMessages)}
                     </Accordion.Content>
                     <Accordion.Title
                         active={activeIndex === 2}
@@ -63,7 +108,7 @@ class MetaPanel extends React.Component {
                     </Accordion.Title>
                     <Accordion.Content active={activeIndex === 2}>
                         <Label as='a' image>
-                            <img src={currentChannel && currentChannel.createdBy.avatar} />
+                            <img src={currentChannel && currentChannel.createdBy.avatar}/>
                             {currentChannel && currentChannel.createdBy.name}
                         </Label>
                     </Accordion.Content>
