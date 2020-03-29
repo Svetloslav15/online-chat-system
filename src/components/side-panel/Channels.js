@@ -179,8 +179,8 @@ class Channels extends React.Component {
                     <Menu.Item>
                     <span>
                         <Icon name='exchange'/> CHANNELS
-                    </span>
-                         ({channels.length}) <Icon name='add' onClick={this.openModal}/>
+                    </span> ({channels.length}) <Icon name='add' onClick={this.openModal}/>
+
                     </Menu.Item>
                     {this.displayChannels(channels)}
                 </Menu.Menu>

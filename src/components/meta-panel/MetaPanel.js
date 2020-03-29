@@ -1,5 +1,5 @@
 import React from 'react';
-import {Segment, Accordion, Header, Icon, Label, Comment, Image} from 'semantic-ui-react';
+import {Segment, Accordion, Header, Icon, Label, Comment, Image, List} from 'semantic-ui-react';
 import firebase from '../../firebase';
 
 class MetaPanel extends React.Component {
@@ -38,18 +38,20 @@ class MetaPanel extends React.Component {
     };
 
     displayStarredMessages = (starredMessages) => (
-        starredMessages.map(x => (
-            <Comment>
-                <Comment.Avatar src={x.user.avatar}/>
-                <Comment.Content>
-                    <Comment.Author as='a'>{x.user.name}</Comment.Author>
-                    {
-                        x.image ? <Image src={x.image} className='message-image'/> :
-                            <Comment.Text>{x.content}</Comment.Text>
-                    }
-                </Comment.Content>
-            </Comment>
-        ))
+        starredMessages.length > 0 ? (starredMessages.map(x => (
+            <List animated verticalAlign='middle'>
+                <List.Item>
+                    <Image avatar src={x.user.avatar}/>
+                    <List.Content>
+                        <List.Header>{x.user.name}</List.Header>
+                        {
+                            x.image ? <Image src={x.image} className='message-image'/> :
+                                <Comment.Text>{x.content}</Comment.Text>
+                        }
+                    </List.Content>
+                </List.Item>
+            </List>
+        ))) : 'No starred messages yet'
     );
 
 

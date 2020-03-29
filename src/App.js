@@ -10,7 +10,6 @@ import MetaPanel from './components/meta-panel/MetaPanel';
 
 const App = (props) => (
     <Grid columns='equal' className='app' style={{backgroundColor: '#eee'}}>
-        <ColorPanel/>
         <SidePanel
             key={props.currentUser && props.currentUser.id}
             currentUser={props.currentUser}/>
