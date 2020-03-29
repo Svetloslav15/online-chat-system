@@ -115,9 +115,25 @@ class Messages extends React.Component {
             <Message
                 key={message.timestamp}
                 message={message}
+                starMessage={this.starMessage}
                 user={this.state.currentUser}/>
         ))
     );
+
+    starMessage = (message) => {
+        const {channel, messagesRef} = this.state;
+
+        messagesRef.child(channel.id).once('value', function (snapshot) {
+            snapshot.forEach(function (snap) {
+                if (snap.val().timestamp === message.timestamp) {
+                    messagesRef
+                        .child(channel.id)
+                        .child(snap.key)
+                        .update({star: !snap.val().star});
+                }
+            });
+        });
+    };
 
     handleSearchChange = (event) => {
         this.setState({
@@ -150,7 +166,6 @@ class Messages extends React.Component {
             messagesRef, channel, messages, usersCount, searchTerm,
             isChannelStarred, searchResults, searchLoading, privateChannel
         } = this.state;
-
         return (
             <div>
                 <MessagesHeader
