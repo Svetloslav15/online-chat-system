@@ -1,36 +1,89 @@
 html, body, .app {
-  height: 100vh;
-  background-color: #eee;
-  padding: 1em;
+    height: 100vh;
+    background-color: #eee;
+    padding: 1em;
 }
 
 .messages {
-  overflow-y: scroll;
-  height: 55vh;
+    overflow-y: scroll;
+    height: 55vh;
 }
 
 .message__form {
-  position: fixed !important;
-  bottom: 1em;
-  margin-left: 320px !important;
-  left: 0;
-  right: 1em;
-  z-index: 200;
+    position: fixed !important;
+    bottom: 1em;
+    margin-left: 320px !important;
+    left: 0;
+    right: 1em;
+    z-index: 200;
 }
 
 .message-self {
-  border-left: 2px solid orange;
-  padding-left: 8px;
+    border-left: 2px solid orange;
+    padding-left: 8px;
 }
 
 .message-image {
-  padding: 1em;
+    padding: 1em;
 }
 
 .progress-bar {
-  margin-top: 0.3em !important;
+    margin-top: 0.3em !important;
 }
 
 .menu {
-  padding-bottom: 2em;
+    padding-bottom: 2em;
+}
+
+.user-typing {
+    font-style: italic;
+    font-weight: bold;
+    margin-right: 3px;
+}
+
+.typing {
+    width: 5em;
+    height: 2em;
+    position: relative;
+    padding: 10px;
+    margin-left: 5px;
+    background: #e6e6e6;
+    border-radius: 20px;
+}
+
+.typing-dot {
+    float: left;
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+    background: #8d8c91;
+    border-radius: 50%;
+    opacity: 0;
+    animation-name: loadingFade;
+    animation-duration: 2s; /* or: Xms */
+    animation-iteration-count: infinite;
+}
+
+.typing-dot:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.typing-dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes loadingFade {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 0;
+    }
 }

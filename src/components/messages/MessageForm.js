@@ -17,7 +17,8 @@ class MessageForm extends React.Component {
         modal: false,
         uploadState: '',
         uploadTask: null,
-        storageRef: firebase.storage().ref()
+        storageRef: firebase.storage().ref(),
+        typingRef: firebase.database().ref('typing')
     };
 
     openModal = () => this.setState({modal: true});
@@ -56,6 +57,24 @@ class MessageForm extends React.Component {
             return `chat/private-${this.state.channel.id}`
         }
         return 'chat/public';
+    };
+
+    handleKeyDown = () => {
+        const {message, typingRef, channel, currentUser} = this.state;
+
+        if (message) {
+            typingRef
+                .child(channel.id)
+                .child(currentUser.uid)
+                .set(currentUser.displayName);
+        }
+        else {
+            typingRef
+                .child(channel.id)
+                .child(currentUser.uid)
+                .remove();
+        }
+
     };
 
     uploadFile = (file, metadata) => {
@@ -116,7 +135,7 @@ class MessageForm extends React.Component {
 
     sendMessage = () => {
         const {getMessagesRef} = this.props;
-        const {message, channel} = this.state;
+        const {message, channel, typingRef, currentUser} = this.state;
 
         if (message) {
             this.setState({loading: true});
@@ -125,7 +144,11 @@ class MessageForm extends React.Component {
                 .push()
                 .set(this.createMessage())
                 .then(() => {
-                    this.setState({loading: false, message: '', errors: []})
+                    this.setState({loading: false, message: '', errors: []});
+                    typingRef
+                        .child(channel.id)
+                        .child(currentUser.uid)
+                        .remove();
                 })
                 .catch((err) => {
                     this.setState({loading: false, errors: this.state.errors.concat(err)})
@@ -145,6 +168,7 @@ class MessageForm extends React.Component {
                     fluid
                     name='message'
                     onChange={this.handleChange}
+                    onKeyDown={this.handleKeyDown}
                     style={{marginBottom: '0.7em'}}
                     label={<Button icon={'add'}/>}
                     labelPosition='left'
