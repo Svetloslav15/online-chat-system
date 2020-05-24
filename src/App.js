@@ -3,7 +3,6 @@ import './App.css';
 
 import {connect} from 'react-redux';
 import {Grid} from 'semantic-ui-react'
-import ColorPanel from './components/color-panel/ColorPanel';
 import SidePanel from './components/side-panel/SidePanel';
 import Messages from './components/messages/Messages';
 import MetaPanel from './components/meta-panel/MetaPanel';
