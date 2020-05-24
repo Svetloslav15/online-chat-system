@@ -1,4 +1,4 @@
-# Dev Chat
+# 💌 Dev Chat
 ![Dev Chat Image](https://i.imgur.com/h8eMLht.png)
 
 This is a simpler Slack clone built with ReactJS, Redux and Firebase.
