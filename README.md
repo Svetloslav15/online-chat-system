@@ -1,5 +1,5 @@
+# 💌 Dev Chat
 ![Dev Chat Image](https://i.imgur.com/h8eMLht.png)
-# Dev Chat
 
 This is a simpler Slack clone built with ReactJS, Redux and Firebase.
 
@@ -15,10 +15,6 @@ The project functionalities are login and register. Writing messages in group ch
 npm install
 npm start
 ```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 
