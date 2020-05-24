@@ -16,10 +16,6 @@ npm install
 npm start
 ```
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
 ## Built With
 
 * [ReactJS](https://reactjs.org/) - The web framework used
