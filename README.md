@@ -9,7 +9,7 @@ The project functionalities are login and register. Writing messages in group ch
 
 ### Prerequisites
 
-1. In order to run the application you should make an account in firebase. Then you should copy data from fireabase.example.js and paste it into firebase.js file + credentials from your account.
+1. In order to run the application you should make an account in firebase. Then you should copy data from fireabase.example.js and paste it into firebase.js file + credentials from your account
 2. Then run
 ```
 npm install
