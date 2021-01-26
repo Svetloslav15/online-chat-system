@@ -26,5 +26,4 @@ npm start
 * **Svetloslav Novoselski** 
 
 ## License
-
 This project is licensed under the MIT License
